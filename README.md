@@ -3,9 +3,11 @@
 Connectify est une application de gestion de projets collaborative permettant aux utilisateurs de créer des projets, gérer des tâches et collaborer en temps réel.
 
 ## Objectifs du projet
+
 Ce projet est un exemple d’application professionnelle utilisant React et TypeScript. Il vise à introduire les bonnes pratiques de développement et à illustrer les concepts clés de React.
 
 ## Fonctionnalités principales
+
 - Création et gestion de projets
 - Attribution de tâches et suivi de statut
 - Notifications en temps réel
