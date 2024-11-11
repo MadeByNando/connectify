@@ -18,9 +18,11 @@ Assurez-vous d’avoir les éléments suivants installés sur votre machine :
 
 1. **Organisation des Dossiers** : Nous utilisons une structure de type Atomic Design :
 
-   - `src/components/atoms` : Composants de base réutilisables
-   - `src/components/molecules` : Composants composés d’atomes
-   - `src/components/organisms` : Composants complets constitués de molécules et d’atomes
+   - `src/components/atoms` : Composants de base réutilisables (boutons, champs de texte, etc.). Ce sont des composants isolés qui ne dépendent pas d’autres composants.
+   - `src/components/molecules` : Composants constitués de plusieurs atomes. Par exemple, un formulaire de recherche avec un champ de texte et un bouton.
+   - `src/components/organisms` : Composants plus complexes, composés de molécules et d’atomes, et pouvant être autonomes (ex. une carte d’utilisateur incluant des informations, un avatar et des boutons).
+   - `src/components/templates` : Structure de mise en page qui définit la disposition des organisms et molecules sans contenu réel. Les templates servent de « modèles de pages » et facilitent la mise en forme globale d’une page sans définir de données spécifiques.
+   - `src/components/pages` : Composants représentant des pages complètes de l’application. Ils utilisent les templates pour la structure et y injectent les données et composants spécifiques à chaque page (ex. une page de profil utilisateur ou une page d’accueil).
 
 2. **Nommage** :
    - Les composants doivent utiliser le **PascalCase** (`MonComposant.tsx`).
