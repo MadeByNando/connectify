@@ -1,12 +1,15 @@
 import React from "react";
-import ListeTaches from "@/components/ListeTaches";
+import ListeTaches from "@/components/molecules/ListeTaches/ListeTaches";
+import { TaskProvider } from "@/contexts/TaskContext";
 
 function App() {
   return (
-    <div>
-      <h1>Application Connectify</h1>
-      <ListeTaches />
-    </div>
+    <TaskProvider>
+      <div>
+        <h1>Application Connectify</h1>
+        <ListeTaches />
+      </div>
+    </TaskProvider>
   );
 }
 
