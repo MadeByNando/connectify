@@ -1,0 +1,18 @@
+/* variables.css */
+:root {
+  /* Couleurs pour le thème clair */
+  --color-bg-light: #ffffff;
+  --color-text-light: #000000;
+  --color-primary-light: #6200ea;
+  --color-secondary-light: #03dac6;
+
+  /* Couleurs pour le thème sombre */
+  --color-bg-dark: #121212;
+  --color-text-dark: #ffffff;
+  --color-primary-dark: #bb86fc;
+  --color-secondary-dark: #03dac6;
+
+  /* Autres variables */
+  --font-family: "Arial", sans-serif;
+  --transition: 0.3s ease;
+}

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { useTaskContext } from "@/contexts/TaskContext";
+import { useDispatch } from "react-redux";
+import { addTask } from "@/store/taskSlice";
 import { Tache } from "@/types/types";
 import TextInput from "@/components/atoms/TextInput/TextInput";
 import Button from "@/components/atoms/Button/Button";
 
 const TaskForm: React.FC = () => {
-  const { addTask } = useTaskContext();
+  const dispatch = useDispatch();
   const [titre, setTitre] = useState("");
   const [priorite, setPriorite] = useState<"faible" | "moyenne" | "élevée">(
     "moyenne"
@@ -19,10 +20,9 @@ const TaskForm: React.FC = () => {
       terminee: false,
       priorite,
     };
-    addTask(newTask);
+    dispatch(addTask(newTask));
     setTitre("");
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -48,7 +48,6 @@ const TaskForm: React.FC = () => {
           </select>
         </label>
       </div>
-
       <Button label="Ajouter la tâche" type="submit" />
     </form>
   );

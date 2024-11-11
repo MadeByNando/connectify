@@ -1,13 +1,18 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* index.css */
+@import "@/styles/variables.css";
+
+/* Styles globaux pour appliquer les thèmes */
+.theme-light {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.theme-dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+/* Transition pour rendre le changement de thème plus fluide */
+body {
+  transition: background-color var(--transition), color var(--transition);
 }

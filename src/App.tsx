@@ -1,18 +1,23 @@
 import React from "react";
-import ListeTaches from "@/components/molecules/ListeTaches/ListeTaches";
-import { TaskProvider } from "@/contexts/TaskContext";
+import { Provider } from "react-redux";
+import store from "@/store";
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import ThemeToggle from "@/components/atoms/ThemeToggle/ThemeToggle";
 import TaskForm from "@/components/organisms/TaskForm/TaskForm";
-
+import ListeTaches from "@/components/molecules/ListeTaches/ListeTaches";
 
 function App() {
   return (
-    <TaskProvider>
-      <div>
-        <h1>Application Connectify</h1>
-        <TaskForm />
-        <ListeTaches />
-      </div>
-    </TaskProvider>
+    <Provider store={store}>
+      <ThemeProvider>
+        <div>
+          <h1>Application Connectify</h1>
+          <ThemeToggle />
+          <TaskForm />
+          <ListeTaches />
+        </div>
+      </ThemeProvider>
+    </Provider>
   );
 }
 

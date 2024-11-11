@@ -1,9 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store";
 import Tache from "@/components/atoms/Tache/Tache";
-import { useTaskContext } from "@/contexts/TaskContext";
 
 const ListeTaches: React.FC = () => {
-  const { tasks } = useTaskContext();
+  const tasks = useSelector((state: RootState) => state.tasks.tasks);
+
   return (
     <div>
       <h2>Mes tâches</h2>
