@@ -1,1 +1,8 @@
+#!/usr/bin/env sh
+echo "=== Starting pre-commit hook ==="
+echo "Running lint-staged..."
 npx lint-staged
+RESULT=$?
+echo "lint-staged exit code: $RESULT"
+echo "=== Finished pre-commit hook ==="
+echo "Finished running lint-staged"
