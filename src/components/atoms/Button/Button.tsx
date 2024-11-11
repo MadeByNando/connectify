@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
 }) => (
   <button type={type} onClick={onClick} disabled={disabled}>
-    {label}
+    {label}tet
   </button>
 );
 
