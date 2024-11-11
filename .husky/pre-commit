@@ -1,3 +1,1 @@
-echo "Running lint-staged..."
 npx lint-staged
-echo "Finished running lint-staged"
