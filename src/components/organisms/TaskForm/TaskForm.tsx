@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addTask } from "@/store/taskSlice";
-import { Tache } from "@/types/types";
-import TextInput from "@/components/atoms/TextInput/TextInput";
-import Button from "@/components/atoms/Button/Button";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTask } from '@/store/taskSlice';
+import { Tache } from '@/types/types';
+import TextInput from '@/components/atoms/TextInput/TextInput';
+import Button from '@/components/atoms/Button/Button';
 
 const TaskForm: React.FC = () => {
   const dispatch = useDispatch();
-  const [titre, setTitre] = useState("");
-  const [priorite, setPriorite] = useState<"faible" | "moyenne" | "élevée">(
-    "moyenne"
+  const [titre, setTitre] = useState('');
+  const [priorite, setPriorite] = useState<'faible' | 'moyenne' | 'élevée'>(
+    'moyenne'
   );
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -21,7 +21,7 @@ const TaskForm: React.FC = () => {
       priorite,
     };
     dispatch(addTask(newTask));
-    setTitre("");
+    setTitre('');
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -40,7 +40,7 @@ const TaskForm: React.FC = () => {
           Priorité:
           <select
             value={priorite}
-            onChange={(e) => setPriorite(e.target.value as Tache["priorite"])}
+            onChange={(e) => setPriorite(e.target.value as Tache['priorite'])}
           >
             <option value="faible">Faible</option>
             <option value="moyenne">Moyenne</option>

@@ -1,5 +1,5 @@
 /* index.css */
-@import "@/styles/variables.css";
+@import '@/styles/variables.css';
 
 /* Styles globaux pour appliquer les thèmes */
 .theme-light {
@@ -14,5 +14,7 @@
 
 /* Transition pour rendre le changement de thème plus fluide */
 body {
-  transition: background-color var(--transition), color var(--transition);
+  transition:
+    background-color var(--transition),
+    color var(--transition);
 }

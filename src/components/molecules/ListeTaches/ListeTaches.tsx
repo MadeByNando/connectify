@@ -1,7 +1,7 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store";
-import Tache from "@/components/atoms/Tache/Tache";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/store';
+import Tache from '@/components/atoms/Tache/Tache';
 
 const ListeTaches: React.FC = () => {
   const tasks = useSelector((state: RootState) => state.tasks.tasks);
