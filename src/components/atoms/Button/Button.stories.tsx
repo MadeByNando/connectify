@@ -15,6 +15,7 @@ export const Primary: Story = {
     label: "Primary Button",
     onClick: () => alert("Button clicked"),
     disabled: false,
+    type: "button",
   },
 };
 
@@ -23,5 +24,6 @@ export const Disabled: Story = {
     label: "Disabled Button",
     onClick: () => alert("Button clicked"),
     disabled: true,
+    type: "button",
   },
 };
